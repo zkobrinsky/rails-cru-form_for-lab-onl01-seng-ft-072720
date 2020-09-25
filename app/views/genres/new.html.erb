@@ -1,0 +1,11 @@
+<% flash.each do |type, msg| %>
+    <div>
+      <%= msg %><br><br>
+    </div>
+  <% end %>
+
+<%= form_for @genre do |f| %>
+    <%= f.label :name, "Name: " %><br>
+    <p><%= f.text_field :name %></p>
+    <p><%= f.submit "Create Genre" %></p>
+    <%end%>

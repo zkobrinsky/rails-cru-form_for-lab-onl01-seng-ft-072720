@@ -24,11 +24,13 @@ class ArtistsController < ApplicationController
     end
 
     def edit
-
+        current_artist
     end
 
     def update
-
+        current_artist
+        @artist.update(artist_params)
+        redirect_to @artist
     end
 
     def destroy
