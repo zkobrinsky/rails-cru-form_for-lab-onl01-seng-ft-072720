@@ -1,0 +1,13 @@
+<% flash.each do |type, msg| %>
+    <div>
+      <%= msg %><br><br>
+    </div>
+  <% end %>
+
+<%= form_for @artist do |f| %>
+    <%= f.label :name, "Name: " %><br>
+    <p><%= f.text_field :name %></p>
+    <%= f.label :bio, "Bio: " %><br>
+    <p><%= f.text_area :bio, size: "30x15" %></p>
+    <p><%= f.submit "Create Artist" %></p>
+    <%end%>
